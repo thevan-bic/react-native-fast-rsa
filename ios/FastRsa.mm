@@ -1,7 +1,16 @@
 #import "FastRsa.h"
 #import <React/RCTBridge+Private.h>
 #import <React/RCTUtils.h>
-#include "librsa_bridge.h"
+
+#if defined(__arm64__) || defined(__aarch64__)
+#include "arm64_librsa_bridge.h"
+#elif defined(__x86_64__)
+#include "arm64_x86_64_librsa_bridge.h"
+#else
+#error "Unsupported architecture"
+#endif
+
+
 
 @implementation FastRsa
 

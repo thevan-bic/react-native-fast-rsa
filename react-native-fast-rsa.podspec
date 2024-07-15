@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.authors      = package["author"]
 
   s.platforms    = { :ios => "11.0" }
-  s.source       = { :git => "https://github.com/jerson/react-native-fast-rsa.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/thevan-bic/react-native-fast-rsa.git", :tag => "#{s.version}" }
 
   s.source_files = "ios/**/*.{h,m,mm}", "cpp/**/*.{hpp,cpp,c,h}"
   s.vendored_framework  = 'ios/Rsa.xcframework'
